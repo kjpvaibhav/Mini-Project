@@ -1,0 +1,27 @@
+{% include "base.html" %}
+<html>
+  <body class="pl-3">
+    
+    <h1>Student info</h1>
+    <form action="http://127.0.0.1:8000/home/" method="post">
+      {% csrf_token %}
+      <input type="text" name="id" />
+      <input type="submit" value="Fetch data" />
+    </form>
+    {% if msg %}
+    <p style="color="green"">{{msg}}</p>
+    {% endif %}
+    {% comment %} {% if data%}
+    <h1>Data</h1>
+    <table>
+      {%for dt in data%}
+      <tr>
+        {% for key, value in dt.items() %}
+        <td>{{key}}{{value}}</td>
+        {% endfor %}
+      </tr>
+      {% endfor %}
+    </table>
+    {% endif %} {% endcomment %}
+  </body>
+</html>

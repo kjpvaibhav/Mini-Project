@@ -1,0 +1,18 @@
+{% include "base.html" %}
+{% block body %}
+<h1 class="px-3 pt-3" style="color:aqua">Register a Student</h1>
+<form action="" method="post" class="px-3 pt-3">
+    
+    <table class="text-light">
+        <tr class="py-2"><td><label for="sid">Regd No: </label></td>
+        <td>{% csrf_token %}
+            <input type="text" id="sid" name="sid"></td></tr>
+
+        <tr class="py-2"><td><label for="sname">Name: </label></td>
+        <td>{% csrf_token %}
+            <input type="text" id="sname" name="sname"></td></tr>
+
+        <tr><td><input type="submit" class="btn btn-warning"></td></tr>
+    </table>
+</form>
+{% endblock body %}

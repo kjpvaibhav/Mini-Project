@@ -1,0 +1,15 @@
+{% include "base.html" %}
+{% block body %}
+<h1 class="px-3 pt-3" style="color:aqua">Fetch Student Details</h1>
+
+<form action="" method="POST" class="px-3 pt-3">
+    <table class="text-light">
+        <tr class="p-3"><td><label for="sid">Regd No: </label></td>
+        <td>{% csrf_token %}
+            <input type="text" id="sid" name="sid"></td></tr>
+
+        <tr><td><input type="submit" class="btn btn-warning" value="Fetch Data"></td></tr>
+    </table>
+</form>
+<table>{{stud}}</table>
+{% endblock body %}
